@@ -1,0 +1,11 @@
+"Memakai Kanban Board":
+1. Mulai.
+2. Menyiapkan tabel "To do", "Doing", "Done".
+3. Menyiapkan "Sticky Note".
+4. Tulis To Do pada Sticky Note.
+5. Tempel Sticky Note yang sudah ditulis To Do tadi pada tabel To Do.
+6. Lakukan Pengecekkan Tabel "To do", "Doing", "Done".
+  ~ Jika salah satu Sticky Note di dalam tabel To Do Sedang dikerjakan, Pindahkan Sticky Note tersebut ke tabel "Doing".
+  ~ Jika salah satu Sticky Note di dalam tabel To Do sudah dikerjakan, Pindahkan Sticky Note tersebut ke tabel "Done".
+7. Jika masih ada To Do yang harus dikerjakan ulangi perintah dari nomor 3.
+8. Selesai

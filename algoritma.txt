@@ -8,4 +8,4 @@
   ~ Jika salah satu Sticky Note di dalam tabel To Do Sedang dikerjakan, Pindahkan Sticky Note tersebut ke tabel "Doing".
   ~ Jika salah satu Sticky Note di dalam tabel To Do sudah dikerjakan, Pindahkan Sticky Note tersebut ke tabel "Done".
 7. Jika masih ada To Do yang harus dikerjakan ulangi perintah dari nomor 3.
-8. Selesai
+8. Selesai.

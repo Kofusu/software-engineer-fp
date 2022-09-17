@@ -1,0 +1,55 @@
+PROGRAM Kanban Board
+
+READ AND WRITE "Task" with string
+READ AND WRITE "ToDoTable" with array
+READ AND WRITE "DoingTable" with array
+READ AND WRITE "DoneTable" with array
+STORE "askLoop" with "true"
+
+PROCEDURE AddToDo (Text)
+  "ToDoTable" PUSH "Text"
+  PRINT "ToDoTable"
+END PROCEDURE
+
+PROCEDURE tableSelectDoingTable (Text)
+  FOR "i" from 1 in "ToDoTable"
+    IF "ToDoTable"["i"] == "Text"
+      DELETE "ToDoTable"["i"]
+      "DoingTable" PUSH "Text"
+    END IF
+  ENDFOR
+  PRINT "DoingTable"
+END PROCEDURE
+
+PROCEDURE tableSelectDoneTable (Text)
+  FOR "i" from 1 in "ToDoTable"
+    IF "DoingTable"["i"] == "Text"
+      DELETE "DoingTable"["i"]
+      "DoneTable" PUSH "Text"
+    END IF
+  ENDFOR
+  PRINT "DoneTable"
+END PROCEDURE
+
+WHILE askLoop
+  Do
+  STORE "Task" with "Makan"
+  STORE "tableSelect" with "Add To Do" OR "Move To Doing" OR "Move To Done"
+
+  IF "tableSelect" == "Add To Do"
+    AddToDo(Task)
+  ELSE IF "tableSelect" == "Move To Doing"
+    tableSelectDoingTable(Task)
+  ELSE IF "tableSelect" == "Move To Done"
+    tableSelectDoneTable(Task)
+  ELSE
+    PRINT "Table Not Found"
+  END IF
+
+  STORE "loop" FROM PRINT "Do yo wanna add more task?" with boolean
+  IF loop == "true"
+    SET "askLoop" with "false"
+  ELSE
+    SET "askLoop" with "true"
+  END IF
+END WHILE
